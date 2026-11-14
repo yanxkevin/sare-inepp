@@ -25,15 +25,15 @@
                 <input type="hidden" id="escola-id">
 
                 <div class="form-group">
-                    <label>Código da Escola (8 dígitos)</label>
+                    <label for="codigo">Código da Escola (8 dígitos)</label>
                     <input type="number" id="codigo" minlength="8" maxlength="8" required placeholder="Ex: 11022558">
                 </div>
                 <div class="form-group">
-                    <label>Nome da Escola</label>
+                    <label for="nome">Nome da Escola</label>
                     <input type="text" id="nome" required>
                 </div>
                 <div class="form-group">
-                    <label>UF</label>
+                    <label for="uf">UF</label>
                     <select id="uf" required onchange="carregarMunicipios()">
                         <option value="">Selecione...</option>
                         <option value="AC">Acre</option>
@@ -66,13 +66,13 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Município</label>
+                    <label for="municipio">Município</label>
                     <select id="municipio" required disabled>
                         <option value="">Selecione a UF primeiro...</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Rede de Ensino</label>
+                    <label for="rede">Rede de Ensino</label>
                     <select id="rede">
                         <option value="Pública">Pública</option>
                         <option value="Privada">Privada</option>
@@ -103,11 +103,11 @@
     <!-- Filtros -->
     <div class="card" style="margin-bottom: 20px; display: flex; gap: 20px; align-items: flex-end;">
         <div class="form-group" style="flex: 1;">
-            <label>Filtrar por UF</label>
+            <label for="filtro-uf">Filtrar por UF</label>
             <input type="text" id="filtro-uf" placeholder="Ex: SP">
         </div>
         <div class="form-group" style="flex: 1;">
-            <label>Filtrar por Rede</label>
+            <label for="filtro-rede">Filtrar por Rede</label>
             <select id="filtro-rede">
                 <option value="">Todas</option>
                 <option value="Pública">Pública</option>
@@ -156,6 +156,10 @@
 
 <!-- Notificação -->
 <div id="toast" class="toast">Mensagem</div>
+
+<!-- Acessibilidade: daltonismo (biblioteca Patternomaly + nosso painel) -->
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="js/daltonismo.js"></script>
 
 <!-- Script JS -->
 <script src="js/script.js"></script>
